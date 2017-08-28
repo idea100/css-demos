@@ -1,0 +1,5 @@
+# backbone demo
+使用backbone实现一种简单的双向绑定：
+利用backbone的view和model实现一个非常简答的双向绑定，
+思路是监听input输入框的input事件，当input输入框的值发生改变的时候，将改变后的值插入backbone的model中，
+监听model的change事件，当model的值发生改变的时候将改变后的值重新赋值给input及span
