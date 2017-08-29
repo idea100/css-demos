@@ -1,0 +1,23 @@
+.box {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.item1 {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  margin: 1px;
+}
+
+.item2 {
+  width: 100px;
+  height: 200px;
+  background-color: #ccc;
+  margin: 1px;
+}
+
+.item3 {
+  visibility: hidden;
+}
