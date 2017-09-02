@@ -3,6 +3,16 @@ $width:100vw;
 $height:100vh;
 $raindrops:120;
 
+.super {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+html, body {
+  @extend .super;
+}
+
 .container {
   position:relative;
   width: $width;
@@ -108,22 +118,3 @@ $drop-height:$drop-width*$drop-stretch;
     animation: #{$drop-delay}s falling 0.3s ease-in infinite;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.xxx{}
