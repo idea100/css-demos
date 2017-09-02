@@ -1,0 +1,36 @@
+html, body, .content {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.content .item {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border: 1px solid #333;
+  background-color: #eee;
+  float: left;
+}
+
+$item: 400;
+@while $item < 1600 {
+  $numItem: floor($item / 100);
+  $screen: $item;
+
+  @while $screen < $item + 100 {
+    @media screen and (min-width: #{$screen}px) {
+      .content .item {
+        width: #{(($screen % 100) / $numItem + 100)}px;
+      }
+    }
+
+    $screen: $screen + $numItem;
+  }
+  $item: $item + 100;
+}
+
+
+@media screen and (min-width: 1600px) {
+  .content .item {
+    width: 100px; } }

@@ -3,50 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="./index.css">
+    <!-- <link rel="stylesheet" href="./index.css"> -->
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <div class="content">
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
+    <div class="content" id="root">
     </div>
 
     <script type="text/javascript">
-      var body = document.querySelector('body')
-      var items = document.querySelectorAll('.item')
+      // var body = document.querySelector('body')
+      // var items = document.querySelectorAll('.item')
+      //
+      // function onWindowSizeChange() {
+      //   var bodyWidth = body.clientWidth
+      //   var num = parseInt(bodyWidth / 102)
+      //   var itemWidth = bodyWidth / num
+      //   console.log(itemWidth, num)
+      //
+      //   items.forEach(function (item) {
+      //     item.style.width = (itemWidth - 2) + 'px'
+      //   })
+      // }
+      //
+      // window.addEventListener('resize', onWindowSizeChange)
+      //
+      // onWindowSizeChange()
 
-      function onWindowSizeChange() {
-        var bodyWidth = body.clientWidth
-        var num = parseInt(bodyWidth / 102)
-        var itemWidth = bodyWidth / num
-        console.log(itemWidth, num)
+      var root = document.getElementById('root')
 
-        items.forEach(function (item) {
-          item.style.width = (itemWidth - 2) + 'px'
-        })
+      for (var i = 0; i < 100; i++) {
+        var item = document.createElement('div')
+        item.className = 'item'
+        root.appendChild(item)
       }
-
-      window.addEventListener('resize', onWindowSizeChange)
-
-      onWindowSizeChange()
 
     </script>
   </body>
