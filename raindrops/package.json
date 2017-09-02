@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "build": "NODE_ENV=production webpack",
-    "start": "NODE_ENV=development webpack-dev-server"
+    "build": "env NODE_ENV=production webpack",
+    "start": "env NODE_ENV=development webpack-dev-server"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
